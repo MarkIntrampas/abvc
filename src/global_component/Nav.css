@@ -1,0 +1,39 @@
+#cont{
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+.nav{
+color:white;
+background-color:#E91F68;
+font-weight: 700;
+padding-left: 10%;
+padding-right: 10%;
+position: sticky; 
+top: 0;
+z-index: 1000; 
+
+}
+
+.nav-link{
+    color:white;
+    font-size: 18px;
+    transition-duration: 1s;
+}
+
+.nav-link:hover{
+    font: 22px;
+}
+
+.current{
+    color:white;
+    font-size: 18px;
+}
+
+#logo{
+ height: 40px;
+ width: 40px;
+ max-width: 40px;
+ max-height: 40px;
+}

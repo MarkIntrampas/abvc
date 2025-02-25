@@ -1,0 +1,77 @@
+#container{
+    width: 100%;
+    height: auto;
+}
+
+#sec1{
+width: 100%;
+height: 90vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: 
+linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Black overlay with opacity */
+url('../media/BG.jpg'); /* Background image */
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+
+}
+
+
+#logoCon{
+    width: 50%;
+}
+
+#sec1logo{
+    width: 500px;
+    height: 300px;
+    float: right;
+}
+
+
+#sec1sub{
+    width: 50%;
+    }
+    
+    @font-face {
+        font-family: 'DroidSansMono';
+        src:   
+             url('./Android.ttf') format('truetype'); 
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      #companyName {
+        font-family: 'DroidSansMono', sans-serif;
+        font-size: 78px;
+        color: white;
+        text-align: left;
+        width: 60%;
+      }
+
+      #companyName {
+        font-family: 'DroidSansMono', sans-serif;
+        font-size: 78px;
+        color: white;
+        text-align: left;
+        width: 60%;
+      }
+
+
+      @font-face {
+        font-family: 'Orbitron';
+        src:   
+             url('./Orbitron.ttf') format('truetype'); 
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      #qout{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 28px;
+        color: white;
+        text-align: left;
+        width: 100%;
+      }
+      
