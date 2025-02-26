@@ -15,6 +15,7 @@ url('../media/BG.jpg'); /* Background image */
 background-size: cover;
 background-attachment: fixed;
 background-position: center;
+margin:0;
 
 }
 
@@ -70,8 +71,46 @@ background-position: center;
       #qout{
         font-family: 'Orbitron', sans-serif;
         font-size: 28px;
-        color: white;
+        color: yellow;
         text-align: left;
         width: 100%;
       }
       
+
+      #sec2{
+        width: 100%;
+        height: 50vh;
+        background-color: WHITE;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+      }
+
+      .sec2sub{
+        height: 100%;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mv{
+        height: 10%;
+        width: 100%;
+        font-family: 'DroidSansMono', sans-serif;
+        font-size: 38px;
+        color:#E91F68;
+      }
+
+
+      .mvcontext{
+        width: 90%;
+        height: 60%;
+        font-size: 18px;
+        font-family: 'Orbitron', sans-serif;
+        text-align: justify;
+        font-style: oblique;
+        font-size: 600;
+      }

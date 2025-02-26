@@ -18,22 +18,25 @@ z-index: 1000;
 
 .nav-link{
     color:white;
-    font-size: 18px;
+    font-size: 16px;
     transition-duration: 1s;
+    text-decoration: none;
 }
 
 .nav-link:hover{
-    font: 22px;
+    font: 18px;
+    text-decoration: underline;
 }
 
 .current{
     color:white;
-    font-size: 18px;
+    font-size: 16px;
+    text-decoration: underline;
 }
 
 #logo{
- height: 40px;
- width: 40px;
- max-width: 40px;
- max-height: 40px;
+ height: 30px;
+ width: 30px;
+ max-width: 30px;
+ max-height: 30px;
 }
