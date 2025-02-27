@@ -2,6 +2,7 @@ import './App.css';
 import {React, Component } from 'react';
 import Home from './pages/home/Home/Home';
 import Nav from './global_component/Nav';
+import Footer from './global_component/Footer';
 
 
 class App extends Component{
@@ -15,7 +16,7 @@ render() {
     <div class="App">
       <Nav />
       <Home />
-      <h1>hi</h1>
+      <Footer />
     </div>
   );
  
