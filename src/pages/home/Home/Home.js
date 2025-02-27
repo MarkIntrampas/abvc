@@ -1,6 +1,8 @@
 import {React, Component} from "react";
 import './style/home.css';
 import logo from './media/sec1logo.png';
+import pic1 from './media/sec3pic1.png';
+import pic2 from './media/sec3pic2.png';
 
 class Home extends Component{
 
@@ -44,6 +46,23 @@ render(){
              and providing competent employees to its rapidly expanding workforce.
             </p>
           </div>
+      </div>
+
+      <div id="sec3">
+      <h1 id="sub3title">OUR SERVICES</h1>
+        <div class="sec3sub">
+          <div class="sec3subcon">
+            <h1 class="pictitle">DATA ENTRY</h1>
+            <img class="sec3pic" src={pic1}></img>
+
+          </div>
+
+          <div class="sec3subcon">
+          <h1 class="pictitle">BOOK KEEPING</h1>
+            <img class="sec3pic" src={pic2}></img>
+
+          </div>
+        </div>
       </div>
       
    </div>
