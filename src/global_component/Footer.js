@@ -13,9 +13,9 @@ class Footer extends Component{
         <div id="Col1Sub">
           <h1 id="ColSubText">CONTACT US</h1>
           <ul>
-             <li></li>
-             <li></li>
-             <li></li>
+             <li>LinkendIn</li>
+             <li>ale@alebosmaventurescorp.com</li>
+             <li>Facebook</li>
           </ul>
 
         </div>
