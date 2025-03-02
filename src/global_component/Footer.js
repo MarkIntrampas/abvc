@@ -1,5 +1,6 @@
 import {React, Component} from 'react';
 import './Footer.css';
+import './Footer-smaller.css';
 import FooterLogo from './footerLogo.png';
 
 

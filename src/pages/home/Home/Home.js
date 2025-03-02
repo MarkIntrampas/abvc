@@ -1,5 +1,6 @@
 import {React, Component} from "react";
 import './style/home.css';
+import './style/home-small.css';
 import logo from './media/sec1logo.png';
 import pic1 from './media/sec3pic1.png';
 import pic2 from './media/sec3pic2.png';
