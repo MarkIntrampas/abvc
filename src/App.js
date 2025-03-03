@@ -16,7 +16,13 @@ class App extends Component{
     this.setState({ currentPage: newPage });
   };
 
- 
+ removeLoader = ()=>{
+  setTimeout(() => {
+   
+    document.querySelector("#LoaderContainer").style.display = 'none';
+
+  }, 3000);
+ }
 
 render() {
 
@@ -24,10 +30,12 @@ render() {
 
   
   return (
-    <div class="App">
-
+    <div class="App" >
+{this.removeLoader()}
+      <div id="LoaderContainer">
+</div>
       <Nav  control={this.changePage}/>
-      <Loader />
+     
       <Home />
       <Footer />
     </div>
@@ -35,9 +43,12 @@ render() {
 }else{
   return (
     <div class="App">
+  <div id="LoaderContainer">
+
+</div>
   <Nav  control={this.changePage}/>
-      <Loader />
-  
+    
+      {this.removeLoader()}
       <Footer />
     </div>
   );

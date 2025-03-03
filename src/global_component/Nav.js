@@ -10,8 +10,22 @@ import navlogo from "./Nav media/LOGO2.png";
 class Nav extends Component {
  
   action = (Page) => {
-    // Update parent component's state via the passed function
-    this.props.control(""+Page);
+    
+    const link = document.querySelectorAll('.nav-link');
+    setTimeout(() => {
+   
+  
+      document.querySelector(".Home").classList.remove('current');
+      document.querySelector(".About").classList.remove('current');
+      document.querySelector(".Blogs").classList.remove('current');
+      document.querySelector(".Contacts").classList.remove('current');
+  
+     document.querySelector("."+Page).classList.add('current');
+  
+    }, 3000);
+
+
+    this.props.control(""+Page);  
    
   
   };
@@ -35,10 +49,10 @@ class Nav extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav mx-auto">
-              <a className="nav-item nav-link current" onClick={()=> this.action("Home")} href="#">HOME <span className="sr-only"></span></a>
-              <a className="nav-item nav-link" onClick={()=> this.action("About")} href="#">ABOUT US</a>
-              <a className="nav-item nav-link" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
-              <a className="nav-item nav-link" onClick={()=> this.action("Contacts")}  href="#">CONTACTS</a>
+              <a className="nav-item nav-link current Home" onClick={()=> this.action("Home")} href="#">HOME <span className="sr-only"></span></a>
+              <a className="nav-item nav-link About" onClick={()=> this.action("About")} href="#">ABOUT US</a>
+              <a className="nav-item nav-link Blogs" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
+              <a className="nav-item nav-link Contacts" onClick={()=> this.action("Contacts")}  href="#">CONTACTS</a>
             </div>
           </div>
         </nav>
