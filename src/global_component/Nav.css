@@ -16,6 +16,18 @@ z-index: 1000;
 
 }
 
+.btn-clck:active{
+border-color: white;
+box-shadow: none;
+transition-duration: .4s;
+}
+
+.btn-clck:hover{
+    border-color: white;
+    transition-duration: .4s;
+    box-shadow: none;
+    }
+
 .nav-link{
     color:white;
     font-size: 16px;

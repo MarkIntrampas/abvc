@@ -15,7 +15,7 @@ class Nav extends Component {
         <nav className="navbar navbar-expand-md navbar-light nav">
           <a className="navbar-brand brand"  href="#"><img id="logo"src={navlogo}></img></a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler btn-clck"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -23,7 +23,7 @@ class Nav extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon btn-clck"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav mx-auto">
