@@ -8,6 +8,14 @@ import './Nav.css';
 import navlogo from "./Nav media/LOGO2.png";
 
 class Nav extends Component {
+ 
+  action = (Page) => {
+    // Update parent component's state via the passed function
+    this.props.control(""+Page);
+   
+  
+  };
+
   render() {
     return (
       <div id="cont">
@@ -27,10 +35,10 @@ class Nav extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav mx-auto">
-              <a className="nav-item nav-link current" href="#">HOME <span className="sr-only"></span></a>
-              <a className="nav-item nav-link" href="#">ABOUT US</a>
-              <a className="nav-item nav-link" href="#">BLOGS</a>
-              <a className="nav-item nav-link" href="#">CONTACTS</a>
+              <a className="nav-item nav-link current" onClick={()=> this.action("Home")} href="#">HOME <span className="sr-only"></span></a>
+              <a className="nav-item nav-link" onClick={()=> this.action("About")} href="#">ABOUT US</a>
+              <a className="nav-item nav-link" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
+              <a className="nav-item nav-link" onClick={()=> this.action("Contacts")}  href="#">CONTACTS</a>
             </div>
           </div>
         </nav>
