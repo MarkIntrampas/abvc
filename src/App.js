@@ -3,7 +3,7 @@ import {React, Component } from 'react';
 import Home from './pages/home/Home/Home';
 import Nav from './global_component/Nav';
 import Footer from './global_component/Footer';
-import Loader from './global_component/loader/Loader'
+
 
 
 class App extends Component{
