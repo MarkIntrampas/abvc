@@ -3,6 +3,10 @@ import './Loader.css';
 
 
 class Loader extends Component{
+restart = ()=>{
+ 
+};
+
 
 render(){
     return(
