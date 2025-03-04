@@ -17,7 +17,7 @@ render(){
         </div>
         
          <div id="sec1sub">
-            <h1 id="companyName"> ALE BOSMA VENTURES CORPORTION</h1>
+            <h1 id="companyName"> ALE BOSMA VENTURES CORPORATION</h1>
            {/*} <h1 id="qoute">Empowering Your Business with Precision and Proficiency</h1>{*/}
 
          </div>

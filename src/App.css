@@ -7,7 +7,7 @@
   background-color: #E91F68;
   animation: blink 3s linear forwards;
   display: flex;
-  visibility: visible;
+  opacity: 1;
   }
   
   /* Keyframes to make the loader blink */
@@ -23,7 +23,7 @@
       }
       100% {
         opacity: 0;
-       
+        
       }
     }
 
