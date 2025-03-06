@@ -416,21 +416,133 @@ return(
                     </p>
                         
                     </div> 
-      </div>
-</div>
+            </div>
+        </div>
+    </div>
+ </div>
 
-
-
-
-
-
-
-
-
-</div>
-  
+ {/*}
+ <div id="AboutSec4">
+  <div id="Teambody"> 
+   <div id="org-chart">
+    <div class="org-container">
     
+      <div class="org-node">
+          <img decoding="async" src="http://localhost/p/wp-content/uploads/2023/11/Ale-new.png" class="org-image"></img>
+        <span class="name">CEO</span>
+        <span>Chief Executive Officer</span>
+      </div>
+     
+      <div class="department">
+        <div class="sub-department org-node">
+           <img decoding="async" src="" class="org-image"></img>
+           <span class="name">CEO</span>
+          <span>Management</span>
+        </div>
+      </div>
+       <div class="department">
+          <div class="sub-department org-node">
+          <img decoding="async" src="" class="org-image"></img>
+           <span class="name">CEO</span>
+          <span>Human Resources</span>
+        </div>
+         <div class="sub-department org-node">
+          <img decoding="async" src="" class="org-image"></img>
+           <span class="name">CEO</span>
+          <span>Human Resources</span>
+        </div>
+        <div class="sub-department org-node">
+          <img decoding="async" src="" class="org-image"></img>
+           <span class="name">CEO</span>
+          <span>Public Relations</span>
+        </div>
+       </div>
+        
+     
+      <div class="department">
+        <div class="sub-department org-node">
+          Department 1
+          <span>10 People</span>
+          
+          <div class="org-node">Employee 1</div>
+          <div class="org-node">Employee 2</div>
+          <div class="org-node">Employee 3</div>
+          <div class="org-node">Employee 4</div>
+          <div class="org-node">Employee 5</div>
+          <div class="org-node">Employee 6</div>
+          <div class="org-node">Employee 7</div>
+          <div class="org-node">Employee 8</div>
+          <div class="org-node">Employee 9</div>
+          <div class="org-node">Employee 10</div>
+        </div>
+        <div class="sub-department org-node">
+          Department 2
+          <span>10 People</span>
+          
+          <div class="org-node">Employee 1</div>
+          <div class="org-node">Employee 2</div>
+          <div class="org-node">Employee 3</div>
+          <div class="org-node">Employee 4</div>
+          <div class="org-node">Employee 5</div>
+          <div class="org-node">Employee 6</div>
+          <div class="org-node">Employee 7</div>
+          <div class="org-node">Employee 8</div>
+          <div class="org-node">Employee 9</div>
+          <div class="org-node">Employee 10</div>
+        </div>
+        <div class="sub-department org-node">
+          Department 3
+          <span>10 People</span>
+         
+          <div class="org-node">Employee 1</div>
+          <div class="org-node">Employee 2</div>
+          <div class="org-node">Employee 3</div>
+          <div class="org-node">Employee 4</div>
+          <div class="org-node">Employee 5</div>
+          <div class="org-node">Employee 6</div>
+          <div class="org-node">Employee 7</div>
+          <div class="org-node">Employee 8</div>
+          <div class="org-node">Employee 9</div>
+          <div class="org-node">Employee 10</div>
+        </div>
+        <div class="sub-department org-node">
+          Department 4
+          <span>10 People</span>
+       
+          <div class="org-node">Employee 1</div>
+          <div class="org-node">Employee 2</div>
+          <div class="org-node">Employee 3</div>
+          <div class="org-node">Employee 4</div>
+          <div class="org-node">Employee 5</div>
+          <div class="org-node">Employee 6</div>
+          <div class="org-node">Employee 7</div>
+          <div class="org-node">Employee 8</div>
+          <div class="org-node">Employee 9</div>
+          <div class="org-node">Employee 10</div>
+        </div>
+        <div class="sub-department org-node">
+          Department 5
+          <span>10 People</span>
+         
+          <div class="org-node">Employee 1</div>
+          <div class="org-node">Employee 2</div>
+          <div class="org-node">Employee 3</div>
+          <div class="org-node">Employee 4</div>
+          <div class="org-node">Employee 5</div>
+          <div class="org-node">Employee 6</div>
+          <div class="org-node">Employee 7</div>
+          <div class="org-node">Employee 8</div>
+          <div class="org-node">Employee 9</div>
+          <div class="org-node">Employee 10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+ 
 </div>
+
+{*/}
 
 
 </div>  
