@@ -18,7 +18,7 @@ class Nav extends Component {
       document.querySelector(".Home").classList.remove('current');
       document.querySelector(".About").classList.remove('current');
       document.querySelector(".Blogs").classList.remove('current');
-      document.querySelector(".Contacts").classList.remove('current');
+      document.querySelector(".Contact").classList.remove('current');
   
      document.querySelector("."+Page).classList.add('current');
   
@@ -52,7 +52,7 @@ class Nav extends Component {
               <a className="nav-item nav-link current Home" onClick={()=> this.action("Home")} href="#">HOME <span className="sr-only"></span></a>
               <a className="nav-item nav-link About" onClick={()=> this.action("About")} href="#">ABOUT US</a>
               <a className="nav-item nav-link Blogs" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
-              <a className="nav-item nav-link Contacts" onClick={()=> this.action("Contacts")}  href="#">CONTACTS</a>
+              <a className="nav-item nav-link Contact" onClick={()=> this.action("Contact")}  href="#">CONTACTS</a>
             </div>
           </div>
         </nav>

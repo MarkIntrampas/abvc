@@ -1,0 +1,45 @@
+#ContactCon{
+ width: 100%;
+ height: auto;
+}
+
+#ContactSec1{
+    width: 100%;
+    height: 40vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DroidSansMono', sans-serif;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Black overlay with opacity */
+    url('../media/abtsec1.jpg'); /* Background image */
+    background-size: cover;
+    
+}
+
+
+#ContactSec2{
+    width: 100%;
+    height: 70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DroidSansMono', sans-serif;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(233, 31, 104,0.7)); 
+    background-size: cover;
+    
+}
+
+
+#map{
+    height: 70%;
+    width: 100%
+}
+
+.ContactSec2Sub{
+padding: 1%;
+ width: 35%;   
+ height: 100%;
+ 
+}

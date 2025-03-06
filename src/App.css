@@ -5,16 +5,22 @@
   top: -1;
   z-index: 9999;
   background-color: #E91F68;
-  animation: blink 3s linear forwards;
+  animation: load 3s linear forwards;
   display: flex;
   opacity: 1;
   }
   
   /* Keyframes to make the loader blink */
-  @keyframes blink {
+  @keyframes load {
       0% {
         opacity: 1;
       }
+      
+
+      50% {
+        opacity: 0.5
+      }
+      
       
       100% {
         opacity: 0;
