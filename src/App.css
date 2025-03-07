@@ -34,6 +34,7 @@
 .App {
   text-align: center;
   width: 100%;
+  height: auto;
 }
 
 .App-logo {

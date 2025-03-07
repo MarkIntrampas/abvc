@@ -11,7 +11,8 @@ import Footer from './global_component/Footer';
 class App extends Component{
 
   state ={
-   currentPage:"Home"   
+   currentPage:"Home",
+   firstLoad:false 
   };
 
  
@@ -21,17 +22,20 @@ class App extends Component{
   };
 
  removeLoader = ()=>{
-  document.querySelector("#LoaderContainer").style.display = 'flex';
+  if(this.state.firstLoad===true){
+ document.querySelector("#LoaderContainer").style.display = 'flex';
+  }
+
   setTimeout(() => {
    
     document.querySelector("#LoaderContainer").style.display = 'none';
-
+      this.state.firstLoad=true;
   }, 2000);
  }
 
 render() {
 
-  if(this.state.currentPage=="Home"){
+  if(this.state.currentPage==="Home"){
 
   
   return (
@@ -45,7 +49,7 @@ render() {
       <Footer />
     </div>
   );
-}else if(this.state.currentPage=="About"){
+}else if(this.state.currentPage==="About"){
 
   return (
     <div class="App" >
@@ -54,12 +58,11 @@ render() {
 </div>
       <Nav  control={this.changePage}/>
      
-      <About load={this.removeLoader} />
+     <About /> 
       <Footer />
     </div>
   );
-
-}else if(this.state.currentPage=="Contact"){
+}else if(this.state.currentPage==="Contact"){
 
   return (
     <div class="App" >
@@ -68,11 +71,12 @@ render() {
 </div>
       <Nav  control={this.changePage}/>
      
-      <Contact load={this.removeLoader}/>
+     <Contact /> 
       <Footer />
     </div>
   );
 
+  
 
 }else{
   return (
