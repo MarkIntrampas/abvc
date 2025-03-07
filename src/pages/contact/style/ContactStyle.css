@@ -20,20 +20,19 @@
 
 #ContactSec2{
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     display:flex;
     justify-content: center;
     align-items: center;
     font-family: 'DroidSansMono', sans-serif;
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(233, 31, 104,0.7)); 
+    background-image:  linear-gradient(155deg, rgba(123,16,55,1) 50%, rgba(233,31,104,1) 44%);
     background-size: cover;
     
 }
 
 
 #map{
-    height: 70%;
+    height: 60%;
     width: 100%
 }
 
@@ -41,5 +40,50 @@
 padding: 1%;
  width: 35%;   
  height: 100%;
+ background-color:white;
+display: flex;  
+flex-direction: column;
  
+}
+
+#contactForm{
+    width:98%;
+    height: 90%;
+    min-width:98%;
+    background-color:blue;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 5%;
+    flex-direction: column;
+}
+
+
+.inputContainer{
+    width: 95%;
+    height: fit-content;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formLabels{
+ text-align: left;
+ align-content: center;
+ padding: 0;
+ font-size: 18px;
+ color:white;
+ font-family: 'Orbitron';
+ line-height: 18px;
+}
+    
+
+.contactInput{
+ padding:1%;
+ width: 100%;
+ height: 42px;
+ box-sizing: border-box;
+ font-family: 'Orbitron';
+ margin:0;
 }
