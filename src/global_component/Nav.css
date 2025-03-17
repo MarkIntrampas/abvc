@@ -37,6 +37,9 @@ transition-duration: .4s;
     
 }
 
+.nav-link:active{
+    color:white;
+}
 .nav-link:hover{
     font: 18px;
     text-decoration: underline;

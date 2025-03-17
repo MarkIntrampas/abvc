@@ -107,6 +107,7 @@ flex-direction: column;
 color:white;
 background-color:#4CAF50; 
 font-weight: 600;
+transition-duration: 0.5s;
 }
 
 #ContactSubmitButton:hover{
