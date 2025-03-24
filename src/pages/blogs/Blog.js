@@ -1,10 +1,13 @@
 import { Component } from "react";
 import './style/Blogstyle.css'; 
+import sample from './media/abtsec1.jpg';
+
 
 
 class Blogs extends Component{
    link = "https://whfwipusshyzvlakoejd.supabase.co/storage/v1/object/sign/media/sample.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJtZWRpYS9zYW1wbGUucG5nIiwiaWF0IjoxNzQyMjc1ODc5LCJleHAiOjE3NzM4MTE4Nzl9.buURNnBln18J1WvWhuHigfdqJevMAqPFjL6s7VUznW0";
-    render(){
+   link2 = "media/abtsec1.jpg";
+   render(){
      return(
        <div id="BlogContainer">
 
@@ -12,18 +15,47 @@ class Blogs extends Component{
 
           <div id="BlogSec1">
 
-              <img  src={this.link}  class="blogiItemImage"></img>
+               
+              <div id="featuredBlog">
+                 
+                  <div id="featuredBlogBody">
+                        <h1 id="featuredBlogTitle">BLOG TITLE</h1>
+                        <div id="featuredBlogBodyContent">
+                          <div id="blogAutContainer">
+                               <h1 id="blogAut">Author</h1>
+                          </div>
+                          <div id="blogSubTitleContainer">
+                            <h1 id="blogSubTitle">
+                            Sub title: Lorem   eyJ1cmwiOiJtZWRpYS9zYW1wbGUucG5nIiwiaWF0IjoxNzQyMjc1ODc5LCJleHAiOjE3NzM4MTE4Nzl9
+                              </h1>
+
+                          </div>
+                        </div>
+                        <div id="featuredBlogAction">
+                          <div id="actionTextContainer">
+                            
+                          </div>
+                        </div>
+                  </div>
+                  <img  src={sample}  class="blogiItemImage" alt="featured"></img>
+
+                </div>
+
+             
           </div>
             
             <div id="BlogSec2">
-              <div class="item">Item 1</div>
-              <div class="item">Item 2</div>
-              <div class="item">Item 3</div>
-              <div class="item">Item 4</div>
-              <div class="item">Item 5</div>
-              <div class="item">Item 6</div>
-              <div class="item">Item 5</div>
-              <div class="item">Item 6</div>
+                <div id ="BlogItemContainer">
+                  <div class="item">Item 1</div>
+                  <div class="item">Item 2</div>
+                  <div class="item">Item 3</div>
+                  <div class="item">Item 4</div>
+                  <div class="item">Item 5</div>
+                  <div class="item">Item 6</div>
+                  <div class="item">Item 5</div>
+                  <div class="item">Item 6</div>
+                </div>
+                  
              
           </div>
 
