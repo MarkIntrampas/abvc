@@ -30,12 +30,27 @@ class Blogs extends Component{
                               </h1>
 
                           </div>
+
+                         
                         </div>
+
+
                         <div id="featuredBlogAction">
                           <div id="actionTextContainer">
+                            <div id="blogActionText">
+                              <h1 id="actionText">
+                                Headlines Sample Text. small details about the featured blog.
+                                Headlines Sample Text. small details about the featured blog.
+                              </h1>
+
+                            </div>
+                            <button id="blogActionButton">
+                              Show more
+                            </button>
                             
                           </div>
                         </div>
+                        
                   </div>
                   <img  src={sample}  class="blogiItemImage" alt="featured"></img>
 
@@ -45,6 +60,18 @@ class Blogs extends Component{
           </div>
             
             <div id="BlogSec2">
+                <div id="BlogToggle">
+                  <h1>Latest Posts</h1>
+                    <div id="BlogButtonContainer">
+                      <button class="BlogToggleButtons">MILESTONE</button>
+                      <button class="BlogToggleButtons">EVENTS</button>
+                      <button class="BlogToggleButtons">LATEST</button>
+                    </div>
+
+                   
+
+                </div>
+
                 <div id ="BlogItemContainer">
                   <div class="item">Item 1</div>
                   <div class="item">Item 2</div>
