@@ -81,12 +81,23 @@ class Blogs extends Component{
                        <h1 class="blogItemAuthorName">Author Name</h1>
                     </div>
                     <div class="blogItemBodyContainer">
+                       <h1 class="blogItemTitle">Blog Title</h1>
+                       <h1 class="blogItemContext"> Headlines Sample Text. small details about the featured blog.
+                       Headlines Sample Text. small details about the featured blog.
+                       </h1>
+                       {/*}
+                       <div class="blogItemActionContainer">
+                          <button class="blogItemAction">
+                            Show more
+                          </button>
+                       
+                       </div> 
+                        {*/}
+
 
                     </div>
                     
-                    <div class="blogItemActionContainer">
-
-                    </div> 
+                 
 
                   </div>
                

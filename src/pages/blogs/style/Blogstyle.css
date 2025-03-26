@@ -219,6 +219,12 @@ font-family: Arial, Helvetica, sans-serif;
   
 }
 
+
+.item:hover .blogItemContext{
+  height: 1%;
+}
+
+
 #BlogSec2 .item {
   background-color: white;
   padding: 20px;
@@ -228,6 +234,7 @@ font-family: Arial, Helvetica, sans-serif;
   height: 600px;
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(233,31,104,1) 0px 2px 4px -1px;
+  overflow: hidden;
 }
 
 
@@ -239,6 +246,7 @@ min-height: 45%;
 max-width: 100%;
 max-height: 45%;
 border-radius: 15px 15px 0px 0px;
+transition-duration: 1s;
 }
 
 .blogItemAuthorContainer{
@@ -253,6 +261,7 @@ border-radius: 15px 15px 0px 0px;
  height: 35px;
  width: 35px;
  border-radius: 50%;
+ transition-duration: 2s;
 }
 
 .blogItemAuthorName{
@@ -268,15 +277,53 @@ border-radius: 15px 15px 0px 0px;
 
 .blogItemBodyContainer{
   width: 100%;
-  height: 30%;
-  background-color: blue;
+  height: 45%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: linear 2s ease;
+}
+
+
+
+.blogItemTitle{
+  width: 100%;
+  height: 20%;
+  font-size: 24px;
+  text-align: left;
+  overflow:hidden;
+}
+
+
+
+.blogItemContext{
+  width: 100%;
+  height: 70%;
+  max-height: 70%;
+  min-height:  70%;
+  font-size: 16px;
+  text-align: left;
+  overflow:hidden;
+  font-weight: 300;
+  overflow: hidden;
 }
 
 
 
 .blogItemActionContainer{
 width: 100%;
-height: 15%;
-background-color: yellow;
+height: 25%;
+display: flex;
+flex-direction: row-reverse;
+}
+.blogItemAction{
+  height: 90%;
+  box-sizing: border-box;
+  font-weight: 600;
+  padding: 3%;
+  background-color: rgba(233,31,104,1);
+  color:white;
+  border: 1px solid rgba(233,31,104,1);
 }
 
