@@ -73,14 +73,23 @@ class Blogs extends Component{
                 </div>
 
                 <div id ="BlogItemContainer">
-                  <div class="item">Item 1</div>
-                  <div class="item">Item 2</div>
-                  <div class="item">Item 3</div>
-                  <div class="item">Item 4</div>
-                  <div class="item">Item 5</div>
-                  <div class="item">Item 6</div>
-                  <div class="item">Item 5</div>
-                  <div class="item">Item 6</div>
+                  <div class="item">
+                    <img src={sample} alt="featured" class="blogItemImage"></img>
+                    <div class="blogItemAuthorContainer">
+
+                       <img src={sample} alt="featured" class="blogItemAuthorImage"></img>
+                       <h1 class="blogItemAuthorName">Author Name</h1>
+                    </div>
+                    <div class="blogItemBodyContainer">
+
+                    </div>
+                    
+                    <div class="blogItemActionContainer">
+
+                    </div> 
+
+                  </div>
+               
                 </div>
                   
              

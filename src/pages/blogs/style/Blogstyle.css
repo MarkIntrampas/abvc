@@ -85,6 +85,7 @@ font-family: 'DroidSansMono', sans-serif;
 #blogSubTitleContainer{
 height: 100%;
 width: 100%;
+overflow: hidden;
 
 }
 
@@ -95,6 +96,7 @@ text-align: left;
 font-size: 35px;
 font-weight: 600;
 word-wrap: break-word;
+overflow: hidden;
 }
 
 
@@ -226,5 +228,55 @@ font-family: Arial, Helvetica, sans-serif;
   height: 600px;
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(233,31,104,1) 0px 2px 4px -1px;
+}
+
+
+.blogItemImage{
+width: 100%;
+height: 45%;
+min-width: 100%;
+min-height: 45%;
+max-width: 100%;
+max-height: 45%;
+border-radius: 15px 15px 0px 0px;
+}
+
+.blogItemAuthorContainer{
+ width: 100%;
+ height: 10%;
+ display: flex;
+ align-items: center;
+ padding: 5%;
+}
+
+.blogItemAuthorImage{
+ height: 35px;
+ width: 35px;
+ border-radius: 50%;
+}
+
+.blogItemAuthorName{
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+.blogItemBodyContainer{
+  width: 100%;
+  height: 30%;
+  background-color: blue;
+}
+
+
+
+.blogItemActionContainer{
+width: 100%;
+height: 15%;
+background-color: yellow;
 }
 
