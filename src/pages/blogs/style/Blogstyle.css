@@ -220,9 +220,38 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 
+
 .item:hover .blogItemContext{
-  height: 1%;
+  height: 100%;
+  max-height: 100%;
+  min-height:  100%;
 }
+
+.item:hover .blogItemBodyContainer{
+  height: fit-content;
+  max-height: fit-content;
+  min-height:  fit-content;
+}
+
+
+.item:hover .blogItemImage{
+  height: 0%;
+  max-height: 0%;
+  min-height:  0%;
+  opacity: 0;
+}
+
+
+
+
+.item:hover .blogItemTitle{
+  height: fit-content;
+  max-height: fit-content;
+  min-height:  fit-content;
+  padding: 0;
+}
+
+
 
 
 #BlogSec2 .item {
@@ -230,13 +259,24 @@ font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 600px;
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(233,31,104,1) 0px 2px 4px -1px;
   overflow: hidden;
+
 }
 
+
+
+
+
+
+.item:hover{
+
+  box-shadow: rgba(50, 50, 93, 1) 0px 1px 17px 1px, rgba(233,31,104,1) 0px 5px 6px 1px;  
+  padding: 0px;
+  background-color: red;
+}
 
 .blogItemImage{
 width: 100%;
@@ -255,13 +295,14 @@ transition-duration: 1s;
  display: flex;
  align-items: center;
  padding: 5%;
+ transition-duration: 1s;
 }
 
 .blogItemAuthorImage{
  height: 35px;
  width: 35px;
  border-radius: 50%;
- transition-duration: 2s;
+ transition-duration: 1s;
 }
 
 .blogItemAuthorName{
@@ -282,7 +323,8 @@ transition-duration: 1s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: linear 2s ease;
+  transition-duration: 1s;
+  overflow: hidden;
 }
 
 
@@ -293,6 +335,7 @@ transition-duration: 1s;
   font-size: 24px;
   text-align: left;
   overflow:hidden;
+  transition-duration: 1s;
 }
 
 
@@ -307,6 +350,7 @@ transition-duration: 1s;
   overflow:hidden;
   font-weight: 300;
   overflow: hidden;
+  transition-duration: 1s;
 }
 
 

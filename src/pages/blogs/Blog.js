@@ -100,7 +100,7 @@ class Blogs extends Component{
                  
 
                   </div>
-               
+              
                 </div>
                   
              
