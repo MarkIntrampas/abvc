@@ -1,5 +1,6 @@
 import { Component } from "react";
 import './style/Blogstyle.css'; 
+import './style/Blogstyle-smaller.css';
 import sample from './media/abtsec1.jpg';
 
 
