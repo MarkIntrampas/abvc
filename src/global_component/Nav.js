@@ -9,8 +9,16 @@ import navlogo from "./Nav media/LOGO2.png";
 
 class Nav extends Component {
  
+
+  closeDropdown = () => {
+    const dropdownMenu = document.querySelector('#navbarNavAltMarkup');
+    if (dropdownMenu.classList.contains('show')) {
+      dropdownMenu.classList.remove('show');  // Close the dropdown
+    }
+  };
+
   action = (Page) => {
-    
+    this.closeDropdown();
     const link = document.querySelectorAll('.nav-link');
     setTimeout(() => {
    
