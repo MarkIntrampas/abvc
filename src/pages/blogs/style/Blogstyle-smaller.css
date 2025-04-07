@@ -139,4 +139,13 @@ margin: 0;
       }
 
 
+#BlogItemContainer{
+    width: 100%;
+}
+
+
+.item{
+width: 100%;
+}
+
 }
