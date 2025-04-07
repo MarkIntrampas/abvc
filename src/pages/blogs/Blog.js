@@ -20,7 +20,10 @@ class Blogs extends Component{
               <div id="featuredBlog">
                  
                   <div id="featuredBlogBody">
+                    
                         <h1 id="featuredBlogTitle">BLOG TITLE</h1>
+
+
                         <div id="featuredBlogBodyContent">
                           <div id="blogAutContainer">
                                <h1 id="blogAut">Author</h1>
@@ -36,6 +39,7 @@ class Blogs extends Component{
                         </div>
 
 
+                        
                         <div id="featuredBlogAction">
                           <div id="actionTextContainer">
                             <div id="blogActionText">

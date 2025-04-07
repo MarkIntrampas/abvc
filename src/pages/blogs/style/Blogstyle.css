@@ -87,6 +87,7 @@ height: 100%;
 width: 100%;
 overflow: hidden;
 
+
 }
 
 #blogSubTitle{
@@ -102,7 +103,7 @@ overflow: hidden;
 
 #featuredBlogAction{
   width: 100%;
-  height: 10%; 
+  height: 40%; 
   display: flex;
   flex-direction: row;
 }
