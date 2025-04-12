@@ -38,6 +38,10 @@ class Nav extends Component {
   
   };
 
+  login = ()=>{
+   alert("Login");
+  }
+
   render() {
     return (
       <div id="cont">
@@ -61,7 +65,7 @@ class Nav extends Component {
               <a className="nav-item nav-link About" onClick={()=> this.action("About")} href="#">ABOUT US</a>
               <a className="nav-item nav-link Blogs" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
               <a className="nav-item nav-link Contact" onClick={()=> this.action("Contact")}  href="#">CONTACTS</a>
-              <a className="nav-item nav-link  Login" href="#">LOGIN</a>
+              <a className="nav-item nav-link  Login"  onClick={()=>this.login() } href="#">LOGIN</a>
             </div>
           </div>
         </nav>
