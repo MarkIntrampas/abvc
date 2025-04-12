@@ -66,12 +66,18 @@ class Blogs extends Component{
             
             <div id="BlogSec2">
                 <div id="BlogToggle">
-                  <h1>Latest Posts</h1>
+                  <h1 id="BlogToggleText">Latest Posts</h1>
                     <div id="BlogButtonContainer">
                       <button class="BlogToggleButtons">MILESTONE</button>
                       <button class="BlogToggleButtons">EVENTS</button>
                       <button class="BlogToggleButtons">LATEST</button>
                     </div>
+
+                    <select id="toogleDropdown" name="fruits">
+                     <option value="apple">MILESTONE</option>
+                      <option value="banana">EVENTS</option>
+                      <option value="cherry">LATEST</option>
+                    </select>
 
                    
 
