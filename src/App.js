@@ -25,17 +25,32 @@ class App extends Component{
   };
 
  removeLoader = ()=>{
+  
+  //document.querySelector("#LoginPane").style.display = 'none';
   if(this.state.firstLoad===true){
  document.querySelector("#LoaderContainer").style.display = 'flex';
   }
 
   setTimeout(() => {
-   
+     
     document.querySelector("#LoaderContainer").style.display = 'none';
       this.state.firstLoad=true;
   }, 2000);
  }
 
+
+  showlogin(action){
+    if(action==="open"){
+      document.querySelector("#LoginPane").style.display = 'flex';
+    }else{
+      document.querySelector("#LoginPane").style.display = 'none';
+    }
+  
+
+  }
+  
+
+  
 render() {
 
 
@@ -51,7 +66,11 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 {this.removeLoader()}
       <div id="LoaderContainer">
 </div>
-      <Nav  control={this.changePage}/>
+
+<div id="LoginPane" onClick={()=> this.showlogin('hide')}>
+</div>
+
+      <Nav  control={this.changePage} LoginAction={this.showlogin} />
      
       <Home load={this.removeLoader} />
       <Footer />
@@ -64,7 +83,10 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 {this.removeLoader()}
       <div id="LoaderContainer">
 </div>
-      <Nav  control={this.changePage}/>
+<div id="LoginPane" onClick={()=> this.showlogin('hide')}>
+</div>
+
+      <Nav  control={this.changePage} LoginAction={this.showlogin} />
      
      <About /> 
       <Footer />
@@ -77,7 +99,11 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 {this.removeLoader()}
       <div id="LoaderContainer">
 </div>
-      <Nav  control={this.changePage}/>
+
+<div id="LoginPane" onClick={()=> this.showlogin('hide')}>
+</div>
+
+      <Nav  control={this.changePage} LoginAction={this.showlogin} />
      
      <Contact /> 
       <Footer />
@@ -94,7 +120,12 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 {this.removeLoader()}
       <div id="LoaderContainer">
 </div>
-      <Nav  control={this.changePage}/>
+
+<div id="LoginPane" onClick={()=> this.showlogin('hide')}>
+</div>
+
+
+      <Nav  control={this.changePage} LoginAction={this.showlogin} />
      
       <Blogs load={this.removeLoader} />
       <Footer />
@@ -106,6 +137,11 @@ const supabase = createClient(supabaseUrl, supabaseKey);
   <div id="LoaderContainer">
 
 </div>
+
+<div id="LoginPane" onClick={()=> this.showlogin('hide')}>
+</div>
+
+
   <Nav  control={this.changePage}/>
     
       {this.removeLoader()}

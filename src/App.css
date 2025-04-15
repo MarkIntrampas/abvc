@@ -9,6 +9,19 @@
   display: flex;
   opacity: 1;
   }
+
+
+  #LoginPane{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -1;
+    z-index: 9999;
+    background-color:rgba(0,0,0 ,0.7);
+    display: none;
+
+
+  }
   
   /* Keyframes to make the loader blink */
   @keyframes load {
