@@ -19,8 +19,16 @@
     z-index: 9999;
     background-color:rgba(0,0,0 ,0.7);
     display: none;
+    align-items: center;
+    justify-content: center;
 
 
+  }
+
+  #FormContainer{
+    width: 400px;
+    height: 500px;
+    background-color: white;
   }
   
   /* Keyframes to make the loader blink */
