@@ -67,7 +67,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
       <div id="LoaderContainer">
 </div>
 
-<div id="LoginPane" onClick={()=> this.showlogin('hide')}>
+<div id="LoginPane" >
 
   <div id="FormContainer">
      <div id="FormHeader">
@@ -76,8 +76,8 @@ const supabase = createClient(supabaseUrl, supabaseKey);
      </div>
 
      <div id="FormFooter">
-        <h1 id="FormHeaderText">LOGIN</h1>
-        <button id="FormHeaderButton">CLOSE</button>
+        <h1 id="FormFooterText">© Ale Bosma Ventures Corporation</h1>
+        <button id="FormHeaderButton" onClick={()=> this.showlogin('hide')}>CLOSE</button>
 
      </div>
 
