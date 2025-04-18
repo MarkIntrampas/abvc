@@ -70,8 +70,21 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 <div id="LoginPane" onClick={()=> this.showlogin('hide')}>
 
   <div id="FormContainer">
+     <div id="FormHeader">
+        <h1 id="FormHeaderText">LOGIN</h1>
 
+     </div>
+
+     <div id="FormFooter">
+        <h1 id="FormHeaderText">LOGIN</h1>
+        <button id="FormHeaderButton">CLOSE</button>
+
+     </div>
+
+     
+    
   </div>
+
 </div>
 
       <Nav  control={this.changePage} LoginAction={this.showlogin} />
