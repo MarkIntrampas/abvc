@@ -7,6 +7,7 @@ import Contact from './pages/contact/Contact';
 import Blogs from './pages/blogs/Blog';
 import Nav from './global_component/Nav';
 import Footer from './global_component/Footer';
+import logo from "./pages/home/Home/media/sec1logo.png";
 
 
 
@@ -72,6 +73,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
   <div id="FormContainer">
      <div id="FormHeader">
         <h1 id="FormHeaderText">LOGIN</h1>
+        <img src={logo} alt="logo" id="loginLogo"></img>
 
      </div>
 

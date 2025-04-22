@@ -38,20 +38,31 @@
     width: 100%;
     padding-left:5%;
     padding-right:5%;
-    height: 10%;
+   
+    height: fit-content;
     color:white;
     font-size: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(233,31,104,0.2);
+
   }
 
 
   #FormHeaderText{
     color:#E91F68;
     font-size: 24px;
+    padding-top:2%;
+    display: flex;
+    align-items: center;
     font-family: 'DroidSansMono', sans-serif;
+  }
+
+  #loginLogo{
+    height: 24px;
+    width: 24px;
+    object-fit:fill;
   }
 
 
