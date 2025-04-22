@@ -76,6 +76,39 @@ const supabase = createClient(supabaseUrl, supabaseKey);
         <img src={logo} alt="logo" id="loginLogo"></img>
 
      </div>
+     
+     <div id="formContainerBody">
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">Username:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">Password:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <button type="button" class="loginInput" id="LoginButton">LOGIN</button>
+           <div id="formOptionsContainer">
+              <div id="showPasswordCotainer">
+                <h1 id="showPasswordText">Show Password</h1>
+                <input type="checkbox" id="showPasswordCheckbox"></input>
+        
+
+              </div>
+
+              <h1 id="LoginRegister">Register</h1>
+
+           </div>
+         </div>
+
+
+
+
+     </div>
+
 
      <div id="FormFooter">
         <h1 id="FormFooterText">© Ale Bosma Ventures Corporation</h1>
