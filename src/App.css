@@ -117,10 +117,10 @@
 
 
 #showPasswordCotainer{
-  width: fit-content;
+  width: 102px;
   height: fit-content;
   display: flex;
-
+  justify-content: space-between;
 }
 
 #showPasswordText{
