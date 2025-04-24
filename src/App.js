@@ -51,6 +51,20 @@ class App extends Component{
   }
   
 
+  register(dir){
+    if(dir==="go"){
+     document.querySelector("#loginContainer").style.display = 'none';
+     document.querySelector("#registerFormContainer").style.display = 'flex';
+     document.querySelector("#registerFormContainer").style.height = '800px';
+    }else{
+      document.querySelector("#loginContainer").style.display = 'flex';
+      document.querySelector("#registerFormContainer").style.display = 'none';
+
+    }
+   
+  }
+
+
   
 render() {
 
@@ -70,14 +84,14 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 <div id="LoginPane" >
 
-  <div id="FormContainer">
+  <div  id="loginContainer" class="FormContainer">
      <div id="FormHeader">
         <h1 id="FormHeaderText">LOGIN</h1>
         <img src={logo} alt="logo" id="loginLogo"></img>
 
      </div>
      
-     <div id="formContainerBody">
+     <div id="LoginFormContainer" class="formContainerBody">
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">Username:</h1>
@@ -90,22 +104,20 @@ const supabase = createClient(supabaseUrl, supabaseKey);
          </div>
 
          <div class="loginInputContainer">
-           <button type="button" class="loginInput" id="LoginButton">LOGIN</button>
-           <div id="formOptionsContainer">
-              <div id="showPasswordCotainer">
-                <h1 id="showPasswordText">Show Password</h1>
-                <input type="checkbox" id="showPasswordCheckbox"></input>
+        
+           <div class="formOptionsContainer">
+              <div class="showPasswordCotainer">
+                <h1 class="showPasswordText">Show Password</h1>
+                <input type="checkbox" class="showPasswordCheckbox"></input>
         
 
               </div>
 
-              <h1 id="LoginRegister">Register</h1>
+              <h1 id="LoginRegister" onClick={()=> this.register("go")} >Register</h1>
 
            </div>
+           <button type="button" class="loginInput" id="LoginButton">LOGIN</button>
          </div>
-
-
-
 
      </div>
 
@@ -120,6 +132,87 @@ const supabase = createClient(supabaseUrl, supabaseKey);
     
   </div>
 
+
+
+
+  <div  id="registerFormContainer" class="FormContainer">
+     <div id="FormHeader">
+        <h1 id="FormHeaderText">REGISTER</h1>
+        <img src={logo} alt="logo" id="loginLogo"></img>
+
+     </div>
+     
+     <div  class="formContainerBody">
+
+     <div class="loginInputContainer">
+           <h1 class="loginLabel">FIRSTNAME:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">MIDDLE NAME:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">LAST NAME:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">USERNAME:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">PASSWORD:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <h1 class="loginLabel">CONFIRM PASSWORD:</h1>
+           <input class="loginInput"></input>
+         </div>
+
+         <div class="loginInputContainer">
+           <button type="button" class="loginInput" id="LoginButton">REGISTER</button>
+           <div class="formOptionsContainer">
+              <div class="showPasswordCotainer">
+                <h1 class="showPasswordText">Show Password</h1>
+                <input type="checkbox" class="showPasswordCheckbox"></input>
+        
+
+              </div>
+
+              <h1 id="LoginRegister" onClick={()=> this.register("back")} >LOGIN</h1>
+
+           </div>
+         </div>
+
+     </div>
+
+
+     <div id="FormFooter">
+        <h1 id="FormFooterText">© Ale Bosma Ventures Corporation</h1>
+        <button id="FormHeaderButton" onClick={()=> this.showlogin('hide')}>CLOSE</button>
+
+     </div>
+
+     
+    
+  </div>
+
+
+
+
+
+  
+
+
+
+
+  
+  
 </div>
 
       <Nav  control={this.changePage} LoginAction={this.showlogin} />
