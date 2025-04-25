@@ -175,7 +175,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
          </div>
 
          <div class="loginInputContainer">
-           <button type="button" class="loginInput" id="LoginButton">REGISTER</button>
+          
            <div class="formOptionsContainer">
               <div class="showPasswordCotainer">
                 <h1 class="showPasswordText">Show Password</h1>
@@ -187,6 +187,8 @@ const supabase = createClient(supabaseUrl, supabaseKey);
               <h1 id="LoginRegister" onClick={()=> this.register("back")} >LOGIN</h1>
 
            </div>
+           <button type="button" class="loginInput" id="LoginButton">REGISTER</button>
+           
          </div>
 
      </div>
