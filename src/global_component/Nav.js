@@ -3,11 +3,20 @@
 //import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Correct import for Bootstrap JS and Popper.js
 //import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js'
 
-import { React, Component } from 'react';
 import './Nav.css';
 import navlogo from "./Nav media/LOGO2.png";
+import  Login from '../global_component/Login/Login';
+import React, { Component, createRef } from 'react'; 
+
 
 class Nav extends Component {
+
+
+  constructor(props) {
+    super(props);
+    this.LoginRef = React.createRef(); // ← ref for Login component
+  }
+ 
  
 
   closeDropdown = () => {
@@ -18,6 +27,7 @@ class Nav extends Component {
   };
 
   action = (Page) => {
+    this.LoginRef.current.showlogin("close");
     this.closeDropdown();
     const link = document.querySelectorAll('.nav-link');
     setTimeout(() => {
@@ -40,11 +50,14 @@ class Nav extends Component {
 
   login = ()=>{
     this.closeDropdown();
-    this.props.LoginAction("open");
+   // this.setState({ loginPaneState: "open" })
+    this.LoginRef.current.showlogin("open");
+
   }
 
   render() {
     return (
+      
       <div id="cont">
         {/* Bootstrap Navbar */}
         <nav className="navbar navbar-expand-md navbar-light nav">
@@ -70,7 +83,10 @@ class Nav extends Component {
             </div>
           </div>
         </nav>
-      </div>
+
+        <Login ref={this.LoginRef} />
+      </div> 
+  
     );
   }
 }
