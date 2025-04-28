@@ -15,6 +15,7 @@ class Login extends Component{
           document.querySelector("#LoginPane").style.display = 'flex';
         }else{
           document.querySelector("#LoginPane").style.display = 'none';
+          this.register("back");
         }
       
     
