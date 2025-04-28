@@ -21,6 +21,24 @@ class Login extends Component{
     
       }
       
+
+      loginSubmission = async ( username, password) => {
+        const supabaseUrl = 'https://whfwipusshyzvlakoejd.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndoZndpcHVzc2h5enZsYWtvZWpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxODMxMTksImV4cCI6MjA1Nzc1OTExOX0.AJibLgp2yoi-mKdPf9IkLmZnGFtypHeQEZIteeCASJA';
+        const supabase = createClient(supabaseUrl, supabaseKey);
+     
+        const { data , error } = await supabase.from('Users').select('*').eq('Username','admin').eq('Password','admin');  
+  
+        if (error) {
+          alert('Error fetching data:', error);
+        } else {
+        
+          alert(`Fetched ${data.length} rows.`);  // Shows how many rows you got
+
+        
+        }
+
+    }
     
       register(dir){
         if(dir==="go"){
@@ -38,10 +56,7 @@ class Login extends Component{
 
     render(){
 
-        const supabaseUrl = 'https://whfwipusshyzvlakoejd.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndoZndpcHVzc2h5enZsYWtvZWpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxODMxMTksImV4cCI6MjA1Nzc1OTExOX0.AJibLgp2yoi-mKdPf9IkLmZnGFtypHeQEZIteeCASJA';
-        const supabase = createClient(supabaseUrl, supabaseKey);
-     
+    
     return(
         <div id="LoginPane" >
 
@@ -77,7 +92,7 @@ class Login extends Component{
               <h1 id="LoginRegister" onClick={()=> this.register("go")} >Register</h1>
 
            </div>
-           <button type="button" class="loginInput" id="LoginButton">LOGIN</button>
+           <button type="button" class="loginInput" id="LoginButton" onClick={()=> this.loginSubmission()}>LOGIN</button>
          </div>
 
      </div>
