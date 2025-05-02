@@ -17,26 +17,44 @@ class Login extends Component{
           document.querySelector("#LoginPane").style.display = 'none';
           this.register("back");
         }
+        this.clearLoginForm();
       
     
       }
       
+      clearLoginForm= ()=>{
+        const usernameLogin = document.getElementById("loginUsername").value="";
+        const passwordLogin = document.getElementById("loginPassword").value="";
+      }
 
       loginSubmission = async ( username, password) => {
-        const supabaseUrl = 'https://whfwipusshyzvlakoejd.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndoZndpcHVzc2h5enZsYWtvZWpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxODMxMTksImV4cCI6MjA1Nzc1OTExOX0.AJibLgp2yoi-mKdPf9IkLmZnGFtypHeQEZIteeCASJA';
+      
+        const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+        const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
+        const usernameLogin = document.getElementById("loginUsername").value;
+        const passwordLogin = document.getElementById("loginPassword").value;
+
+
+
         const supabase = createClient(supabaseUrl, supabaseKey);
      
-        const { data , error } = await supabase.from('Users').select('*').eq('Username','admin').eq('Password','admin');  
+        const { data , error } = await supabase.from('Users').select('*').eq('Username',usernameLogin).eq('Password',passwordLogin);  
+
   
         if (error) {
           alert('Error fetching data:', error);
         } else {
         
-          alert(`Fetched ${data.length} rows.`);  // Shows how many rows you got
-
+          //alert(`Fetched ${data.length} rows.`);  // Shows how many rows you got
+          if(data.length>0){
+           alert("welcome "+usernameLogin);
+          }else{
+            alert("Wrong Credentials");
+          }
         
         }
+
+        this.clearLoginForm();
 
     }
     
@@ -71,12 +89,12 @@ class Login extends Component{
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">Username:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="loginUsername"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">Password:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="loginPassword"></input>
          </div>
 
          <div class="loginInputContainer">
