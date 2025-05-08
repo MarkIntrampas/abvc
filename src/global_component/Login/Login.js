@@ -114,6 +114,7 @@ class Login extends Component{
        if(error){
         alert("Oppss! something went wrong.");
        }else{
+        this.clearRegisterForm();
         alert("Registered");
              }
 
