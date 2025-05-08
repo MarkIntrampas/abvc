@@ -19,6 +19,7 @@ class Login extends Component{
           this.register("back");
         }
         this.clearLoginForm();
+        this.clearRegisterForm();
       
     
       }
@@ -30,12 +31,12 @@ class Login extends Component{
 
 
       clearRegisterForm= ()=>{
-        const  FirstnameRegister = document.getElementById("registerFirstname").value;
-      const middleNameRegister = document.getElementById("registerMiddlename").value;
-      const lastNameRegister = document.getElementById("registerLastname").value;
-      const usernameRegister = document.getElementById("registerUsername").value;
-      const passwordRegister = document.getElementById("registerPassword").value;
-      const confirmpasswordRegister = document.getElementById("registerConfirmPaasword").value;
+        const  FirstnameRegister = document.getElementById("registerFirstname").value="";
+      const middleNameRegister = document.getElementById("registerMiddlename").value="";
+      const lastNameRegister = document.getElementById("registerLastname").value="";
+      const usernameRegister = document.getElementById("registerUsername").value="";
+      const passwordRegister = document.getElementById("registerPassword").value="";
+      const confirmpasswordRegister = document.getElementById("registerConfirmPaasword").value="";
       
 
 
@@ -114,8 +115,9 @@ class Login extends Component{
        if(error){
         alert("Oppss! something went wrong.");
        }else{
-        this.clearRegisterForm();
+        this.showlogin("close");
         alert("Registered");
+    
              }
 
        }else{
