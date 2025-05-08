@@ -65,6 +65,8 @@ class Login extends Component{
           //alert(`Fetched ${data.length} rows.`);  // Shows how many rows you got
           if(data.length>0){
             this.showlogin("close");
+            localStorage.setItem('isLoggedIn', 'true');
+           
            alert("welcome "+usernameLogin);
            this.props.loginStatusChanger();
            
@@ -139,7 +141,7 @@ class Login extends Component{
 
     render(){
 
-    
+ 
     return(
         <div id="LoginPane" >
 

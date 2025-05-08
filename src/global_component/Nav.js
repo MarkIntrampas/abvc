@@ -60,6 +60,13 @@ class Nav extends Component {
   };
   
 
+  logout = ()=>{
+    localStorage.setItem('isLoggedIn', 'false');
+    
+    this.props.parent.setState({ loginStatus: false, currentPage: "Home" });
+
+  };
+
 
   changeLoginStatus = () => {
  
@@ -70,7 +77,7 @@ class Nav extends Component {
 
   render() {
 
-  if(this.props.parent.state.loginStatus===false){
+  if(localStorage.getItem('isLoggedIn')==='false' ||   localStorage.getItem('isLoggedIn')===null){
     return (
        
       <div id="cont">
@@ -130,6 +137,7 @@ class Nav extends Component {
               <a className="nav-item nav-link About" onClick={()=> this.action("About")} href="#">ABOUT US</a>
               <a className="nav-item nav-link Blogs" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
               <a className="nav-item nav-link Contact" onClick={()=> this.action("Contact")}  href="#">CONTACTS</a>
+              <a className="nav-item nav-link  Login"  onClick={()=>this.logout()} href="#">LOG OUT</a>
             </div>
           </div>
         </nav>
