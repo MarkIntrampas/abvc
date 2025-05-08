@@ -62,14 +62,15 @@ class Nav extends Component {
 
 
   changeLoginStatus = () => {
-    alert('Login status changed:');
-    this.setState({ LoginStatus:true})
-    // Possibly update state here
+ 
+   
+    this.props.parent.setState({ loginStatus: true, currentPage: "User-dashboard" });
+ 
   }
 
   render() {
 
-  if(this.state.LoginStatus===false){
+  if(this.props.parent.state.loginStatus===false){
     return (
        
       <div id="cont">

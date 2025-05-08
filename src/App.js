@@ -15,9 +15,18 @@ import Login from './global_component/Login/Login';
 
 class App extends Component{
 
+
+   constructor(props) {
+      super(props);
+     
+
+    }
+
+
   state ={
    currentPage:"Home",
-   firstLoad:false 
+   firstLoad:false,
+   loginStatus:false 
   };
 
  
@@ -57,7 +66,7 @@ render() {
 
 
 
-      <Nav  control={this.changePage} LoginAction={this.showlogin} />
+      <Nav  control={this.changePage} LoginAction={this.showlogin}  parent={this} />
      
       <Home load={this.removeLoader} />
       <Footer />
@@ -72,7 +81,7 @@ render() {
 </div>
 
 
-      <Nav  control={this.changePage} LoginAction={this.showlogin} />
+      <Nav  control={this.changePage} LoginAction={this.showlogin} parent={this}/>
      
      <About /> 
       <Footer />
@@ -88,7 +97,7 @@ render() {
 
 
 
-      <Nav  control={this.changePage} LoginAction={this.showlogin} />
+      <Nav  control={this.changePage} LoginAction={this.showlogin} parent={this}/>
      
      <Contact /> 
       <Footer />
@@ -111,7 +120,7 @@ render() {
 
 
 
-      <Nav  control={this.changePage} LoginAction={this.showlogin} />
+      <Nav  control={this.changePage} LoginAction={this.showlogin}  parent={this}/>
      
       <Blogs load={this.removeLoader} />
       <Footer />
@@ -119,17 +128,15 @@ render() {
   );
 }else{
   return (
-    <div class="App">
-  <div id="LoaderContainer">
-
-</div>
-
-
-
-  <Nav  control={this.changePage}/>
-    
+    <div class="App" >
+      
       {this.removeLoader()}
-      <Footer />
+
+      <div id="LoaderContainer">
+      </div>
+
+      <Nav  control={this.changePage} LoginAction={this.showlogin} parent={this} />
+     
     </div>
   );
 

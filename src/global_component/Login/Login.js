@@ -64,6 +64,7 @@ class Login extends Component{
         
           //alert(`Fetched ${data.length} rows.`);  // Shows how many rows you got
           if(data.length>0){
+            this.showlogin("close");
            alert("welcome "+usernameLogin);
            this.props.loginStatusChanger();
            
@@ -80,7 +81,10 @@ class Login extends Component{
 
     registerSubmission = async ()=>{
       
-   
+      const  FirstnameRegister = document.getElementById("registerFirstname").value;
+      const middleNameRegister = document.getElementById("registerMiddlename").value;
+      const lastNameRegister = document.getElementById("registerLastname").value;
+      const usernameRegister = document.getElementById("registerUsername").value;
       const passwordRegister = document.getElementById("registerPassword").value;
       const confirmpasswordRegister = document.getElementById("registerConfirmPaasword").value;
       
@@ -93,13 +97,6 @@ class Login extends Component{
       const supabase = createClient(supabaseUrl, supabaseKey);
 
       if(passwordRegister===confirmpasswordRegister){
-
-
-        const  FirstnameRegister = document.getElementById("registerFirstname").value;
-        const middleNameRegister = document.getElementById("registerMiddlename").value;
-        const lastNameRegister = document.getElementById("registerLastname").value;
-        const usernameRegister = document.getElementById("registerUsername").value;
-        
         const { data , error } =await supabase.from('Users').insert(
         [{
         Username :''+usernameRegister, 
