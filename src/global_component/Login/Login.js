@@ -80,7 +80,7 @@ class Login extends Component{
         this.clearLoginForm();
 
     }
-
+  
 
     registerSubmission = async ()=>{
       
@@ -142,6 +142,24 @@ class Login extends Component{
       }
     
 
+      loginShowpassword(){
+   
+         const input = document.getElementById("loginPassword");
+    input.type = input.type === "password" ? "text" : "password";
+      }
+
+
+      
+      registerShowpassword(){
+   
+        const input = document.getElementById("registerPassword");
+         input.type = input.type === "password" ? "text" : "password";
+
+
+         const input2 = document.getElementById("registerConfirmPaasword");
+         input2.type = input2.type === "password" ? "text" : "password";
+     }
+
     render(){
 
  
@@ -164,7 +182,7 @@ class Login extends Component{
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">Password:</h1>
-           <input class="loginInput" id="loginPassword"></input>
+           <input type="password" class="loginInput" id="loginPassword"></input>
          </div>
 
          <div class="loginInputContainer">
@@ -172,7 +190,7 @@ class Login extends Component{
            <div class="formOptionsContainer">
               <div class="showPasswordCotainer">
                 <h1 class="showPasswordText">Show Password</h1>
-                <input type="checkbox" class="showPasswordCheckbox"></input>
+                <input type="checkbox" class="showPasswordCheckbox" onChange={()=>this.loginShowpassword()}></input>
         
 
               </div>
@@ -230,12 +248,12 @@ class Login extends Component{
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">PASSWORD:</h1>
-           <input class="loginInput" id="registerPassword"></input>
+           <input type="password" class="loginInput" id="registerPassword"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">CONFIRM PASSWORD:</h1>
-           <input class="loginInput" id="registerConfirmPaasword"></input>
+           <input type="password" class="loginInput" id="registerConfirmPaasword"></input>
          </div>
 
          <div class="loginInputContainer">
@@ -243,7 +261,7 @@ class Login extends Component{
            <div class="formOptionsContainer">
               <div class="showPasswordCotainer">
                 <h1 class="showPasswordText">Show Password</h1>
-                <input type="checkbox" class="showPasswordCheckbox"></input>
+                <input type="checkbox" class="showPasswordCheckbox" onChange={()=>this.registerShowpassword()}></input>
         
 
               </div>
