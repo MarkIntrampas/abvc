@@ -16,6 +16,10 @@ class Nav extends Component {
     super(props);
     this.LoginRef = React.createRef(); // ← ref for Login component
   }
+
+  state={   
+     'LoginStatus':false
+  };
  
  
 
@@ -53,11 +57,19 @@ class Nav extends Component {
    // this.setState({ loginPaneState: "open" })
     this.LoginRef.current.showlogin("open");
 
+  };
+  
+
+
+  changeLoginStatus = () => {
+    alert('Login status changed:');
+    // Possibly update state here
   }
 
   render() {
+  
     return (
-      
+       
       <div id="cont">
         {/* Bootstrap Navbar */}
         <nav className="navbar navbar-expand-md navbar-light nav">
@@ -84,7 +96,7 @@ class Nav extends Component {
           </div>
         </nav>
 
-        <Login ref={this.LoginRef} />
+        <Login ref={this.LoginRef}  loginStatusChanger={this.changeLoginStatus} />
       </div> 
   
     );

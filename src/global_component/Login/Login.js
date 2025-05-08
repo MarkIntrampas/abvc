@@ -10,6 +10,7 @@ class Login extends Component{
 
     }
 
+
     showlogin(action){
         if(action==="open"){
           document.querySelector("#LoginPane").style.display = 'flex';
@@ -27,8 +28,24 @@ class Login extends Component{
         const passwordLogin = document.getElementById("loginPassword").value="";
       }
 
-      loginSubmission = async ( username, password) => {
+
+      clearRegisterForm= ()=>{
+        const  FirstnameRegister = document.getElementById("registerFirstname").value;
+      const middleNameRegister = document.getElementById("registerMiddlename").value;
+      const lastNameRegister = document.getElementById("registerLastname").value;
+      const usernameRegister = document.getElementById("registerUsername").value;
+      const passwordRegister = document.getElementById("registerPassword").value;
+      const confirmpasswordRegister = document.getElementById("registerConfirmPaasword").value;
       
+
+
+
+      }
+
+
+
+      loginSubmission = async  ( username, password) => {
+     
         const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
         const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
         const usernameLogin = document.getElementById("loginUsername").value;
@@ -38,7 +55,7 @@ class Login extends Component{
 
         const supabase = createClient(supabaseUrl, supabaseKey);
      
-        const { data , error } = await supabase.from('Users').select('*').eq('Username',usernameLogin).eq('Password',passwordLogin);  
+        const { data , error } = await supabase.from('Users').select('*').eq('Username',usernameLogin).eq('Password',passwordLogin);
 
   
         if (error) {
@@ -48,6 +65,8 @@ class Login extends Component{
           //alert(`Fetched ${data.length} rows.`);  // Shows how many rows you got
           if(data.length>0){
            alert("welcome "+usernameLogin);
+           this.props.loginStatusChanger();
+           
           }else{
             alert("Wrong Credentials");
           }
@@ -55,6 +74,40 @@ class Login extends Component{
         }
 
         this.clearLoginForm();
+
+    }
+
+
+    registerSubmission = async ()=>{
+      
+      const  FirstnameRegister = document.getElementById("registerFirstname").value;
+      const middleNameRegister = document.getElementById("registerMiddlename").value;
+      const lastNameRegister = document.getElementById("registerLastname").value;
+      const usernameRegister = document.getElementById("registerUsername").value;
+      const passwordRegister = document.getElementById("registerPassword").value;
+      const confirmpasswordRegister = document.getElementById("registerConfirmPaasword").value;
+      
+
+
+
+      const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+      const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
+
+      const supabase = createClient(supabaseUrl, supabaseKey);
+      const { data , error } =await supabase.from('Users').insert(
+        [{
+        Username :''+usernameRegister, 
+        Password :''+passwordRegister
+
+        }]);
+
+      if(error){
+        alert("Oppss! something went wrong.");
+      }else{
+        alert("Registered");
+      }
+
+
 
     }
     
@@ -140,32 +193,32 @@ class Login extends Component{
 
      <div class="loginInputContainer">
            <h1 class="loginLabel">FIRSTNAME:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="registerFirstname"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">MIDDLE NAME:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="registerMiddlename"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">LAST NAME:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="registerLastname"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">USERNAME:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="registerUsername"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">PASSWORD:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="registerPassword"></input>
          </div>
 
          <div class="loginInputContainer">
            <h1 class="loginLabel">CONFIRM PASSWORD:</h1>
-           <input class="loginInput"></input>
+           <input class="loginInput" id="registerConfirmPaasword"></input>
          </div>
 
          <div class="loginInputContainer">
@@ -181,7 +234,7 @@ class Login extends Component{
               <h1 id="LoginRegister" onClick={()=> this.register("back")} >LOGIN</h1>
 
            </div>
-           <button type="button" class="loginInput" id="LoginButton">REGISTER</button>
+           <button type="button" class="loginInput" id="LoginButton"onClick={this.registerSubmission}>REGISTER</button>
            
          </div>
 
