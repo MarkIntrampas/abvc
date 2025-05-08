@@ -80,10 +80,7 @@ class Login extends Component{
 
     registerSubmission = async ()=>{
       
-      const  FirstnameRegister = document.getElementById("registerFirstname").value;
-      const middleNameRegister = document.getElementById("registerMiddlename").value;
-      const lastNameRegister = document.getElementById("registerLastname").value;
-      const usernameRegister = document.getElementById("registerUsername").value;
+   
       const passwordRegister = document.getElementById("registerPassword").value;
       const confirmpasswordRegister = document.getElementById("registerConfirmPaasword").value;
       
@@ -94,18 +91,36 @@ class Login extends Component{
       const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
 
       const supabase = createClient(supabaseUrl, supabaseKey);
-      const { data , error } =await supabase.from('Users').insert(
+
+      if(passwordRegister===confirmpasswordRegister){
+
+
+        const  FirstnameRegister = document.getElementById("registerFirstname").value;
+        const middleNameRegister = document.getElementById("registerMiddlename").value;
+        const lastNameRegister = document.getElementById("registerLastname").value;
+        const usernameRegister = document.getElementById("registerUsername").value;
+        
+        const { data , error } =await supabase.from('Users').insert(
         [{
         Username :''+usernameRegister, 
-        Password :''+passwordRegister
+        Password :''+passwordRegister,
+        Firstname :''+ FirstnameRegister,
+        Middlename:''+ middleNameRegister,
+        Lastname: ''+lastNameRegister
+
+
 
         }]);
 
-      if(error){
+       if(error){
         alert("Oppss! something went wrong.");
-      }else{
+       }else{
         alert("Registered");
-      }
+             }
+
+       }else{
+         alert("Confirmed Password doesn't Match.");
+       }
 
 
 
