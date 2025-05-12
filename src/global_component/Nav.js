@@ -36,12 +36,16 @@ class Nav extends Component {
     const link = document.querySelectorAll('.nav-link');
     setTimeout(() => {
    
-  
-      document.querySelector(".Home").classList.remove('current');
-      document.querySelector(".About").classList.remove('current');
-      document.querySelector(".Blogs").classList.remove('current');
-      document.querySelector(".Contact").classList.remove('current');
-  
+    
+      
+   
+        document.querySelector(".Home").classList.remove('current');
+        document.querySelector(".About").classList.remove('current');
+        document.querySelector(".Blogs").classList.remove('current');
+        document.querySelector(".Contact").classList.remove('current');
+
+      
+     
      document.querySelector("."+Page).classList.add('current');
   
     }, 3000);
@@ -51,6 +55,38 @@ class Nav extends Component {
    
   
   };
+
+
+
+
+
+
+
+  action2 = (Page) => {
+    this.LoginRef.current.showlogin("close");
+    this.closeDropdown();
+    const link = document.querySelectorAll('.nav-link');
+    setTimeout(() => {
+   
+    
+        document.querySelector(".User-dashboard").classList.remove('current');
+        document.querySelector(".About").classList.remove('current');
+        document.querySelector(".Blogs").classList.remove('current');
+        document.querySelector(".Contact").classList.remove('current');
+      
+   
+      
+     
+     document.querySelector("."+Page).classList.add('current');
+  
+    }, 3000);
+
+
+    this.props.control(""+Page);  
+   
+  
+  };
+
 
   login = ()=>{
     this.closeDropdown();
@@ -133,10 +169,10 @@ class Nav extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav mx-auto">
-              <a className="nav-item nav-link current Home" onClick={()=> this.action("Home")} href="#">HOME <span className="sr-only"></span></a>
-              <a className="nav-item nav-link About" onClick={()=> this.action("About")} href="#">ABOUT US</a>
-              <a className="nav-item nav-link Blogs" onClick={()=> this.action("Blogs")} href="#">BLOGS</a>
-              <a className="nav-item nav-link Contact" onClick={()=> this.action("Contact")}  href="#">CONTACTS</a>
+              <a className="nav-item nav-link current User-dashboard" onClick={()=> this.action2("User-dashboard")} href="#">HOME <span className="sr-only"></span></a>
+              <a className="nav-item nav-link About" onClick={()=> this.action2("About")} href="#">ABOUT US</a>
+              <a className="nav-item nav-link Blogs" onClick={()=> this.action2("Blogs")} href="#">BLOGS</a>
+              <a className="nav-item nav-link Contact" onClick={()=> this.action2("Contact")}  href="#">CONTACTS</a>
               <a className="nav-item nav-link  Login"  onClick={()=>this.logout()} href="#">LOG OUT</a>
             </div>
           </div>
