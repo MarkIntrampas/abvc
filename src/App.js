@@ -58,21 +58,44 @@ render() {
 
   if(this.state.currentPage==="Home"){
 
-  
+    if(localStorage.getItem('isLoggedIn')==='false' ||   localStorage.getItem('isLoggedIn')===null){
   return (
     <div class="App" >
 {this.removeLoader()}
       <div id="LoaderContainer">
 </div>
 
-
-
       <Nav  control={this.changePage} LoginAction={this.showlogin}  parent={this} />
      
       <Home load={this.removeLoader} />
       <Footer />
     </div>
+
   );
+}else{
+  
+
+   return (
+    <div class="App" >
+      
+      {this.removeLoader()}
+
+      <div id="LoaderContainer">
+      </div>
+
+      <Nav  control={this.changePage} LoginAction={this.showlogin} parent={this} />
+
+      <UDasboard />
+     
+    </div>
+
+   );
+
+
+
+  }
+
+
 }else if(this.state.currentPage==="About"){
 
   return (
@@ -127,7 +150,7 @@ render() {
       <Footer />
     </div>
   );
-}else{
+}else if(this.state.currentPage==="User-dashboard"){
   return (
     <div class="App" >
       
@@ -142,6 +165,8 @@ render() {
      
     </div>
   );
+
+}else{
 
 }
 
