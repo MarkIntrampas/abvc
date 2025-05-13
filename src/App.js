@@ -7,6 +7,7 @@ import Blogs from './pages/blogs/Blog';
 import Nav from './global_component/Nav';
 import Footer from './global_component/Footer';
 import Login from './global_component/Login/Login';
+import UDasboard from './pages/user-dashboard/User';
 
 
 
@@ -136,6 +137,8 @@ render() {
       </div>
 
       <Nav  control={this.changePage} LoginAction={this.showlogin} parent={this} />
+
+      <UDasboard />
      
     </div>
   );
