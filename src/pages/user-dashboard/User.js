@@ -10,7 +10,7 @@ navStatus ="shown";
 
     asideAction =()=>{
      if(this.navStatus==="shown"){
-      document.querySelector(".sidebarContianer").style.width="fit-content";
+      document.querySelector(".sidebarContianer").style.width="50px";
        document.querySelector(".sidebar").style.width="0";
         document.querySelector("#sidebarHider").innerHTML="⯮";
         this.navStatus="hidden";
