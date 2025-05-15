@@ -1,8 +1,49 @@
 import {React, Component} from 'react';
 import './style/ContactStyle.css';
 import './style/ContactStyle-smalll.css';
+import { createClient } from '@supabase/supabase-js';
 
 class Contact extends  Component{
+
+
+
+    submitSharedThoughts = async ()=>{
+    
+
+        alert("Submit Shared Thought");
+
+
+        const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+        const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
+        
+        const email = document.querySelector("#shareThoughtEmail").value;
+        const name = document.querySelector("#shareThoughtName").value;
+        const Message = document.querySelector("#ContactTextBox").value;
+
+              const supabase = createClient(supabaseUrl, supabaseKey);
+        
+            
+                const { error } = await supabase.from('Shared_Thoughts').insert(
+                [{
+                Email :''+email,
+                Name:''+name,
+                Message:''+Message
+        
+        
+                }]);
+        
+               if(error){
+                alert("Oppss! something went wrong.");
+               }else{
+          document.querySelector("#shareThoughtEmail").value="";
+          document.querySelector("#shareThoughtName").value="";
+          document.querySelector("#ContactTextBox").value="";
+                alert("Sent");
+            
+                     }
+        
+    };
+
 
 
     render(){
@@ -18,12 +59,12 @@ class Contact extends  Component{
              <div id="contactForm">]
                 <div class="inputContainer">
                     <h1 class="formLabels">Name:</h1>
-                    <input class="contactInput" type="text"></input>
+                    <input class="contactInput" id="shareThoughtName" type="text"></input>
                 </div>
 
                 <div class="inputContainer">
                     <h1 class="formLabels" for="Email">Email:</h1>
-                    <input class="contactInput" type="text" name="Email"></input>
+                    <input class="contactInput" type="text" name="Email" id="shareThoughtEmail"></input>
                 </div>
 
                 <div class="inputContainer">
@@ -33,7 +74,7 @@ class Contact extends  Component{
 
                 <div class="inputContainer">
                     
-                    <input class="contactInput" id="ContactSubmitButton" type="button" value="SUBMIT"></input>
+                    <input class="contactInput" id="ContactSubmitButton" type="button" value="SUBMIT" onClick={this.submitSharedThoughts}></input>
                 </div>
 
 
