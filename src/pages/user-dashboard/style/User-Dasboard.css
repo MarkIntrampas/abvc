@@ -27,6 +27,7 @@ transition-property: all;
   overflow: hidden;
   transition-duration: .4s;
 transition-property: all;
+
 }
 
 .logo {
@@ -47,6 +48,7 @@ transition-property: all;
 .nav-menu {
   display: flex;
   flex-direction: column;
+  width: 250px;
 }
 
 .udashnav-item {
