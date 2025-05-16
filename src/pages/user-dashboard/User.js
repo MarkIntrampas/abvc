@@ -6,6 +6,11 @@ import "./style/User-Dasboard.css";
 
 
  class User extends Component{
+
+  componentDidMount(){
+    document.getElementById("sharedThoughtref").click();
+  }
+
 navStatus ="shown";
 
     asideAction =()=>{
@@ -24,6 +29,16 @@ navStatus ="shown";
 
     };
 
+
+    showAContent = (ContentName, sidebarRef)=>{
+
+      document.getElementById(ContentName).style.display="flex";
+         document.getElementById(sidebarRef).classList.add("activeSideNavItem");
+
+
+
+    };
+
 render(){
 
     return(
@@ -34,12 +49,11 @@ render(){
              <aside class="sidebar">
     <div class="logo">
       <i class="fas fa-chart-line"></i>
-      <span>MyDashboard</span>
+ 
     </div>
     <nav class="nav-menu">
-      <a href="#" class="udashnav-item"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="#" class="udashnav-item"><i class="udashboard-item fas fa-user"></i><span>Profile</span></a>
       <a href="#" class="udashnav-item"><i class="udashboard-item fas fa-chart-pie"></i><span>Analytics</span></a>
+      <a href="#" class="udashnav-item" id="sharedThoughtref" onClick={()=>{this.showAContent("SharedThoughts","sharedThoughtref")}}><i class="udashboard-item fas fa-user"></i><span>Shared Thoughts</span></a>
       <a href="#" class="udashnav-item"><i class="udashboard-item fas fa-cog"></i><span>Settings</span></a>
       <a href="#" class="udashnav-item"><i class="udashboard-item fas fa-sign-out-alt"></i><span>Logout</span></a>
     </nav>
@@ -53,9 +67,44 @@ render(){
    </div>
   </div>
 
-  <main class="content">
-    <h1>Welcome to the Dashboard</h1>
-    <p>This is your main content area.</p>
+  <main class="content" id="SharedThoughts">
+   
+
+
+
+    <div class="sharedThoughts-container">
+  <div class="sharedThoughts-emailList">
+    <div class="sharedThoughts-emailItemHeader">
+      <h4 class="sharedThoughts-emaiHeader"><b>Shared Thoughts</b></h4>
+    </div>
+
+    <div class="sharedThoughts-emailItem active">
+      <h4 class="sharedThoughts-emailSubject">Sender Name</h4>
+      <p class="sharedThoughts-emailSnippet">Email</p>
+    </div>
+    <div class="sharedThoughts-emailItem">
+      <h4 class="sharedThoughts-emailSubject">Sender</h4>
+      <p class="sharedThoughts-emailSnippet">Email</p>
+    </div>
+
+  </div>
+
+  <div class="sharedThoughts-emailDetail">
+    <h2 class="sharedThoughts-detailSubject">Welcome to SharedThoughts</h2>
+    <p class="sharedThoughts-detailMeta">From: team@sharedthoughts.app | Date: May 16, 2025</p>
+    <div class="sharedThoughts-detailBody">
+      <p>Hi there,</p>
+      <p>We’re excited to have you on board. Here’s a quick overview...</p>
+      
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
   </main>
 
 
