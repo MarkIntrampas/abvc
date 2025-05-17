@@ -47,7 +47,7 @@ import { createClient } from '@supabase/supabase-js';
                 
                data.map(item =>{
          
-               alert(item.Name);
+               
 
 
               const container = document.querySelector(".sharedThoughts-emailList");
