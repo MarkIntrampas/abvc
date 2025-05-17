@@ -7,25 +7,37 @@ import { createClient } from '@supabase/supabase-js';
 
 
  class User extends Component{
+ 
 
+  fetched=false;
  
 
  constructor(props) {
     super(props);
-     // initialize your array
      
   }
 
-  componentDidMount(){
-    document.getElementById("sharedThoughtref").click();
-   
-  }
 
-  componentWillUnmount(){
+   
+
+     
+ 
+     componentDidMount() {
+  if (this._hasMounted) return;
+  this._hasMounted = true;
+
+  document.querySelector(".sharedThoughts-emailList").innerHTML = '';
+           document.getElementById("sharedThoughtref").click();
+}
+   
+  
+
+  componentDidUnmount(){
       document.querySelector(".sharedThoughts-emailList").innerHTML=''; 
 
   }
 
+ 
   
 
 
@@ -33,7 +45,9 @@ import { createClient } from '@supabase/supabase-js';
   fetchThoughts = async ()=>{
 
 
-            
+       
+
+      if(this.fetched===false){
             document.querySelector(".sharedThoughts-emailList").innerHTML=''; 
   
             const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
@@ -51,13 +65,16 @@ import { createClient } from '@supabase/supabase-js';
               alert('Error fetching data:', error);
             } else {
             
-           
-                
+            let t=false;
+            
                data.map(item =>{
          
-               
+            
+           
 
-
+               if(t===false){
+     
+                  
               const container = document.querySelector(".sharedThoughts-emailList");
   
 
@@ -85,15 +102,20 @@ import { createClient } from '@supabase/supabase-js';
               container.appendChild(emailItem); // Or replace `document.body` with a specific container
 
                return true;
+
+               t=true;
+               }
+
                });
              
+              this.setState({ThoughtFetched:true});
+              this.fetched=true;
               
-           
             }
-
+             
             
-
-  };
+          }
+  }
 
 
   
@@ -119,6 +141,7 @@ navStatus ="shown";
 
     showAContent = (ContentName, sidebarRef)=>{
 
+      
       document.getElementById(ContentName).style.display="flex";
          document.getElementById(sidebarRef).classList.add("activeSideNavItem");
           this.fetchThoughts();
