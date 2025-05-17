@@ -77,6 +77,15 @@ MailDisplay = async (id) =>{
             if (error) {
               alert('Error fetching data:', error);
             } else {   
+                    const element = document.querySelector(" .sharedThoughts-emailDetail");
+                    element.classList.remove('fade-in'); // Remove the class if it exists
+
+                    // Force a reflow/repaint to reset animation state
+                    void element.offsetWidth;
+
+                    element.classList.add('fade-in'); // Re-add the class to trigger animation
+
+
                    data.map( m =>{
 
                       //NAME
