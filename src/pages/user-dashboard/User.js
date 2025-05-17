@@ -91,7 +91,7 @@ MailDisplay = async (id) =>{
                       //NAME
                     document.querySelector(".sharedThoughts-detailSubject").innerHTML=m.Name;
                     //EMAIL
-                    document.querySelector(".sharedThoughts-detailMeta").innerHTML=m.Email;
+                    document.querySelector(".sharedThoughts-detailMeta").innerHTML=m.Email+" | "+m.Date;
                     //MESSAGE
                     document.querySelector(".sharedThoughts-detailBody").innerHTML=m.Message;
 
