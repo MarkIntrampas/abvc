@@ -57,21 +57,43 @@ import { createClient } from '@supabase/supabase-js';
 
 
 
-MailDisplay = (id) =>{
+MailDisplay = async (id) =>{
 
-  //NAME
-  document.querySelector(".sharedThoughts-detailSubject").innerHTML=id; 
-
-  //EMAIL
-  document.querySelector(".sharedThoughts-detailMeta").innerHTML=''; 
-
-
-   //MESSAGE
-  document.querySelector(".sharedThoughts-detailBody").innerHTML=''; 
+  
 
 
 
+     const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+            const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
+            
+    
+    
+    
+            const supabase = createClient(supabaseUrl, supabaseKey);
+         
+            const { data , error } = await supabase.from('Shared_Thoughts').select('*').eq("id",id);
+    
+      
+            if (error) {
+              alert('Error fetching data:', error);
+            } else {   
+                   data.map( m =>{
 
+                      //NAME
+                    document.querySelector(".sharedThoughts-detailSubject").innerHTML=m.Name;
+                    //EMAIL
+                    document.querySelector(".sharedThoughts-detailMeta").innerHTML=m.Email;
+                    //MESSAGE
+                    document.querySelector(".sharedThoughts-detailBody").innerHTML=m.Message;
+
+                   });
+                  
+
+
+
+
+
+            }
 
 
 }
@@ -92,7 +114,7 @@ MailDisplay = (id) =>{
     
             const supabase = createClient(supabaseUrl, supabaseKey);
          
-            const { data , error } = await supabase.from('Shared_Thoughts').select('*');
+            const { data , error } = await supabase.from('Shared_Thoughts').select('*').order('id', { ascending: false });
     
       
             if (error) {

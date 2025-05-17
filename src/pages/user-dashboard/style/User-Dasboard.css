@@ -169,6 +169,7 @@ padding: 0;
     overflow-y: auto;
     min-width:500px;
     max-width:500px;
+    text-align: justify;
   }
 
   .sharedThoughts-detailSubject {
