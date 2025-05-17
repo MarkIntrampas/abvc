@@ -167,6 +167,8 @@ padding: 0;
     flex: 1;
     padding: 1rem;
     overflow-y: auto;
+    min-width:500px;
+    max-width:500px;
   }
 
   .sharedThoughts-detailSubject {
@@ -196,6 +198,7 @@ position: fixed;
 
     .sharedThoughts-container {
       flex-direction: column;
+      width: 100%;
     }
 
     .sharedThoughts-emailList {
@@ -203,5 +206,12 @@ position: fixed;
       border-right: none;
       border-bottom: 1px solid #ddd;
     }
+
+
+      .sharedThoughts-emailDetail {
+        max-width: 100%;
+        min-width: 100%;
+
+      }
 
   }
