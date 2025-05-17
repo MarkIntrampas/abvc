@@ -57,7 +57,7 @@ import { createClient } from '@supabase/supabase-js';
 
               // Create the main div element
               const emailItem = document.createElement('div');
-              emailItem.className = 'sharedThoughts-emailItem active';
+              emailItem.className = 'sharedThoughts-emailItem';
 
               // Create the h4 element for the sender name
               const emailSubject = document.createElement('h4');
