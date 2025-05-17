@@ -1,15 +1,94 @@
 
 import React, {Component} from "react";
 import "./style/User-Dasboard.css";
+import { createClient } from '@supabase/supabase-js';
 
  
 
 
  class User extends Component{
 
+ 
+
+ constructor(props) {
+    super(props);
+     // initialize your array
+     
+  }
+
   componentDidMount(){
     document.getElementById("sharedThoughtref").click();
+    this.fetchThoughts();
   }
+
+
+
+  fetchThoughts = async ()=>{
+
+
+            
+    
+            const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+            const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
+            
+    
+    
+    
+            const supabase = createClient(supabaseUrl, supabaseKey);
+         
+            const { data , error } = await supabase.from('Shared_Thoughts').select('*');
+    
+      
+            if (error) {
+              alert('Error fetching data:', error);
+            } else {
+            
+           
+                
+               data.map(item =>{
+         
+               alert(item.Name);
+
+
+              const container = document.querySelector(".sharedThoughts-emailList");
+  
+
+
+
+              // Create the main div element
+              const emailItem = document.createElement('div');
+              emailItem.className = 'sharedThoughts-emailItem active';
+
+              // Create the h4 element for the sender name
+              const emailSubject = document.createElement('h4');
+              emailSubject.className = 'sharedThoughts-emailSubject';
+              emailSubject.textContent = item.Name;
+
+              // Create the p element for the email snippet
+              const emailSnippet = document.createElement('p');
+              emailSnippet.className = 'sharedThoughts-emailSnippet';
+              emailSnippet.textContent = item.Email;
+
+              // Append the h4 and p elements to the main div
+              emailItem.appendChild(emailSubject);
+              emailItem.appendChild(emailSnippet);
+
+              // Optionally, append the whole structure to the document body or another container
+              container.appendChild(emailItem); // Or replace `document.body` with a specific container
+
+               return true;
+               });
+             
+              
+           
+            }
+
+            
+
+  };
+
+
+  
 
 navStatus ="shown";
 
@@ -38,6 +117,10 @@ navStatus ="shown";
 
 
     };
+
+
+
+    
 
 render(){
 
@@ -73,19 +156,17 @@ render(){
 
 
     <div class="sharedThoughts-container">
+
   <div class="sharedThoughts-emailList">
     <div class="sharedThoughts-emailItemHeader">
       <h4 class="sharedThoughts-emaiHeader"><b>Shared Thoughts</b></h4>
     </div>
+    
 
-    <div class="sharedThoughts-emailItem active">
-      <h4 class="sharedThoughts-emailSubject">Sender Name</h4>
-      <p class="sharedThoughts-emailSnippet">Email</p>
-    </div>
-    <div class="sharedThoughts-emailItem">
-      <h4 class="sharedThoughts-emailSubject">Sender</h4>
-      <p class="sharedThoughts-emailSnippet">Email</p>
-    </div>
+   
+     
+
+
 
   </div>
 
