@@ -185,11 +185,13 @@ navStatus ="shown";
       document.querySelector(".sidebarContianer").style.width="50px";
        document.querySelector(".sidebar").style.width="0";
         document.querySelector("#sidebarHider").innerHTML="⯮";
+            document.querySelector("#sidebarHider").style.opacity="0.3";
         this.navStatus="hidden";
      }else{
        document.querySelector(".sidebarContianer").style.width="250px";
        document.querySelector(".sidebar").style.width="250px";
         document.querySelector("#sidebarHider").innerHTML="⯬";
+        document.querySelector("#sidebarHider").style.opacity="1";
         this.navStatus="shown";
 
      }

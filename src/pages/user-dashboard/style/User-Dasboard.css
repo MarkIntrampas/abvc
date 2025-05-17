@@ -197,6 +197,10 @@ padding: 0;
 
      }
 
+     #sidebarHider{
+      opacity: 0.3;
+     }
+
     .sharedThoughts-container {
       flex-direction: column;
       width: 100%;
