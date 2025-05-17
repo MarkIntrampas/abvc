@@ -18,7 +18,7 @@ import { createClient } from '@supabase/supabase-js';
 
   componentDidMount(){
     document.getElementById("sharedThoughtref").click();
-    this.fetchThoughts();
+   
   }
 
 
@@ -114,6 +114,7 @@ navStatus ="shown";
 
       document.getElementById(ContentName).style.display="flex";
          document.getElementById(sidebarRef).classList.add("activeSideNavItem");
+          this.fetchThoughts();
 
 
 
