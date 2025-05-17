@@ -21,13 +21,20 @@ import { createClient } from '@supabase/supabase-js';
    
   }
 
+  componentWillUnmount(){
+      document.querySelector(".sharedThoughts-emailList").innerHTML=''; 
+
+  }
+
+  
+
 
 
   fetchThoughts = async ()=>{
 
 
             
-            document.querySelector(".sharedThoughts-emailList").innerHTML="";
+            document.querySelector(".sharedThoughts-emailList").innerHTML=''; 
   
             const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
             const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
