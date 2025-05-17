@@ -253,11 +253,6 @@ render(){
   <div class="sharedThoughts-emailList">
     
 
-   
-     
-
-
-
   </div>
 
   <div class="sharedThoughts-emailDetail">
