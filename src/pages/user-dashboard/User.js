@@ -27,7 +27,8 @@ import { createClient } from '@supabase/supabase-js';
 
 
             
-    
+            document.querySelector(".sharedThoughts-emailList").innerHTML="";
+  
             const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
             const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY; 
             
@@ -152,15 +153,15 @@ render(){
 
   <main class="content" id="SharedThoughts">
    
-
+<div class="sharedThoughts-emailItemHeader">
+      <h4 class="sharedThoughts-emaiHeader"><b>Shared Thoughts</b></h4>
+    </div>
 
 
     <div class="sharedThoughts-container">
 
+    
   <div class="sharedThoughts-emailList">
-    <div class="sharedThoughts-emailItemHeader">
-      <h4 class="sharedThoughts-emaiHeader"><b>Shared Thoughts</b></h4>
-    </div>
     
 
    

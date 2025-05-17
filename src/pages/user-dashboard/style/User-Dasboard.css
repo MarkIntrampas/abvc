@@ -80,6 +80,8 @@ transition-property: all;
   padding: 2rem;
   overflow-y: auto;
   display: none;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
