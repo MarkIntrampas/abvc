@@ -42,6 +42,18 @@ import { createClient } from '@supabase/supabase-js';
 
 
 
+
+
+  handleEmailClick = (event) => {
+ const clickedElement = event.currentTarget;
+
+  // Get the custom attribute value (e.g., data-email)
+  const email = clickedElement.getAttribute('thoughtId');
+
+
+};
+
+
   fetchThoughts = async ()=>{
 
 
@@ -83,6 +95,8 @@ import { createClient } from '@supabase/supabase-js';
               // Create the main div element
               const emailItem = document.createElement('div');
               emailItem.className = 'sharedThoughts-emailItem';
+              emailItem.setAttribute('thoughtId',item.id);
+              emailItem.onclick = this.handleEmailClick;
 
               // Create the h4 element for the sender name
               const emailSubject = document.createElement('h4');
